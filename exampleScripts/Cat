@@ -1,0 +1,30 @@
+#!/bin/bash
+#Name
+#   Cat - Concatenate files and display it
+#Usage
+#   Cat [file ...]
+#Return
+#   0   exit correctly
+#   1   when the file does not exist
+#############################################
+ERROR=0 # exit code
+LINE=
+
+while [ $# -gt 0 ]
+do
+    if [ ! -r "$1" ]; then
+        echo "Cannot find file $1" 1>&2
+        ERROR=1
+    else
+        OLDIFS=$IFS
+        IFS=
+        while read LINE
+        do
+            echo "$LINE"
+        done <"$1"
+        IFS=$OLDIFS
+    fi
+    shift
+done
+
+exit $ERROR

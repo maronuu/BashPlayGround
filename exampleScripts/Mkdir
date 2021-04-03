@@ -1,0 +1,33 @@
+#!/bin/bash
+#Usage:
+#   Mkdir directory
+#Return:
+#   0 ok
+#   >0 error
+
+CMDNAME=`basename $0`
+if [ $# -ne 1 ]; then
+    echo "Usage: $CMDNAME directory" 1>&2
+    exit 1
+fi
+
+case $1 in
+    /*) DIR=    ;;
+    *) DIR=.    ;;
+esac
+
+OLDIFS=$IFS
+IFS=/
+for d in $1
+do
+    DIR=$DIR/$d
+    if [ ! -d "$DIR" ]; then
+        mkdir "$DIR"
+        if [ $? -ne 0 ]; then
+            exit $?
+        fi
+    fi
+done
+IFS=$OLDIFS
+
+exit 0
