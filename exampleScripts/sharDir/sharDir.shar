@@ -1,0 +1,91 @@
+#/bin/bash
+# This is a shell archive; to unpack:
+# 1. Remove everything before the "#1/bin/bash"
+# 2. Save the rest of the archive.
+# 3. Execute the archive by entering "bash archive"
+#
+# This archive contains the following files:
+#
+#     .
+#     ./sample2.sh
+#     ./sample1.sh
+#     ./sharDir.shar
+
+if [ -f . ]; then
+  echo "The file . already exists."
+else
+  echo "Extracting ."
+  sed 's/^X//' >. <<\EOF
+EOF
+fi
+
+if [ -f ./sample2.sh ]; then
+  echo "The file ./sample2.sh already exists."
+else
+  echo "Extracting ./sample2.sh"
+  sed 's/^X//' >./sample2.sh <<\EOF
+Xecho "hello"
+Xecho "this is sample 2"EOF
+fi
+
+if [ -f ./sample1.sh ]; then
+  echo "The file ./sample1.sh already exists."
+else
+  echo "Extracting ./sample1.sh"
+  sed 's/^X//' >./sample1.sh <<\EOF
+Xecho "hello"
+Xecho "this is sample 1"EOF
+fi
+
+if [ -f ./sharDir.shar ]; then
+  echo "The file ./sharDir.shar already exists."
+else
+  echo "Extracting ./sharDir.shar"
+  sed 's/^X//' >./sharDir.shar <<\EOF
+X#/bin/bash
+X# This is a shell archive; to unpack:
+X# 1. Remove everything before the "#1/bin/bash"
+X# 2. Save the rest of the archive.
+X# 3. Execute the archive by entering "bash archive"
+X#
+X# This archive contains the following files:
+X#
+X#     .
+X#     ./sample2.sh
+X#     ./sample1.sh
+X#     ./sharDir.shar
+X
+Xif [ -f . ]; then
+X  echo "The file . already exists."
+Xelse
+X  echo "Extracting ."
+X  sed 's/^X//' >. <<\EOF
+XEOF
+Xfi
+X
+Xif [ -f ./sample2.sh ]; then
+X  echo "The file ./sample2.sh already exists."
+Xelse
+X  echo "Extracting ./sample2.sh"
+X  sed 's/^X//' >./sample2.sh <<\EOF
+XXecho "hello"
+XXecho "this is sample 2"EOF
+Xfi
+X
+Xif [ -f ./sample1.sh ]; then
+X  echo "The file ./sample1.sh already exists."
+Xelse
+X  echo "Extracting ./sample1.sh"
+X  sed 's/^X//' >./sample1.sh <<\EOF
+XXecho "hello"
+XXecho "this is sample 1"EOF
+Xfi
+X
+Xif [ -f ./sharDir.shar ]; then
+X  echo "The file ./sharDir.shar already exists."
+Xelse
+X  echo "Extracting ./sharDir.shar"
+X  sed 's/^X//' >./sharDir.shar <<\EOF
+EOF
+fi
+exit 0
